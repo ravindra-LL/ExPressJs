@@ -25,6 +25,16 @@ app.post("/webhook", (req, res) => {
   res.status(200).send("Webhook received successfully!");
 });
 
+// Route for handling GET requests to retrieve New Relic integration description
+app.get("/", (req, res) => {
+  const description = {
+    name: "New Relic Integration",
+    version: "1.0.0",
+    description: "This integration allows monitoring and observability using New Relic."
+  };
+
+  res.status(200).json(description);
+});
 // Start the server
 app.listen(port, () => {
   console.log(`Webhook handler listening at http://localhost:${port}`);
