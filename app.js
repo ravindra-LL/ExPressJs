@@ -31,7 +31,3 @@ app.listen(port, () => {
 });
 
 
-setTimeout(() => {
-  
-  console.log("")
-}, timeout);
